@@ -79,10 +79,10 @@ const isImage = (url: string) =>
 export const imageExists = async (url: string) => {
   let img = "";
   await isImage(url)
-    .then((d) => {
+    .then(() => {
       img = url;
     })
-    .catch((d) => {
+    .catch(() => {
       img = imageApi + url;
     });
 

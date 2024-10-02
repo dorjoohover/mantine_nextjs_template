@@ -1,15 +1,5 @@
 import { nav1, nav2, nav3 } from "./string";
-import {
-  MdOutlineArrowDropDownCircle,
-  MdOutlineShortText,
-  MdOutlineTextFields,
-} from "react-icons/md";
-import { BsTextParagraph } from "react-icons/bs";
-import { RiDeleteBin6Line } from "react-icons/ri";
-import { IoIosCheckboxOutline, IoMdRadioButtonOn } from "react-icons/io";
-import { Libraries } from "@react-google-maps/api";
 import { AdSellType } from "@/config/enum";
-import { GridOptions, SwiperOptions } from "swiper/types";
 // export const api = "http://localhost:5050/api/";
 
 // export const url = "http://localhost:3000";
@@ -79,7 +69,7 @@ export const itemNames = [
     id: "location",
     range: false,
     location: true,
-  }
+  },
 ];
 
 export const gmailImageUrl = "https://lh3.googleusercontent.com";
@@ -109,7 +99,6 @@ const category = "category/";
 const user = "user/";
 const auth = "auth/";
 const estimate = "estimate/";
-const feedback = "feedback/";
 
 export class ConstantApi {
   static category = `${category}all/`;
@@ -286,211 +275,3 @@ export const SellTypes = [
 ];
 
 export const SellTypesString = ["Зарах", "Түрээслүүлэх"];
-
-export const CommitteeData = [
-  {
-    id: "1khoroo",
-    value: "1-р хороо",
-  },
-  {
-    id: "2khoroo",
-    value: "2-р хороо",
-  },
-  {
-    id: "3khoroo",
-    value: "3-р хороо",
-  },
-  {
-    id: "4khoroo",
-    value: "4-р хороо",
-  },
-  {
-    id: "5khoroo",
-    value: "5-р хороо",
-  },
-  {
-    id: "6khoroo",
-    value: "6-р хороо",
-  },
-  {
-    id: "7khoroo",
-    value: "7-р хороо",
-  },
-  {
-    id: "8khoroo",
-    value: "8-р хороо",
-  },
-  {
-    id: "9khoroo",
-    value: "9-р хороо",
-  },
-  {
-    id: "10khoroo",
-    value: "10-р хороо",
-  },
-  {
-    id: "11khoroo",
-    value: "11-р хороо",
-  },
-  {
-    id: "12khoroo",
-    value: "12-р хороо",
-  },
-  {
-    id: "13khoroo",
-    value: "13-р хороо",
-  },
-  {
-    id: "14khoroo",
-    value: "14-р хороо",
-  },
-  {
-    id: "15khoroo",
-    value: "15-р хороо",
-  },
-  {
-    id: "16khoroo",
-    value: "16-р хороо",
-  },
-  {
-    id: "17khoroo",
-    value: "17-р хороо",
-  },
-  {
-    id: "18khoroo",
-    value: "18-р хороо",
-  },
-  {
-    id: "19khoroo",
-    value: "19-р хороо",
-  },
-  {
-    id: "20khoroo",
-    value: "20-р хороо",
-  },
-  {
-    id: "21khoroo",
-    value: "21-р хороо",
-  },
-  {
-    id: "22khoroo",
-    value: "22-р хороо",
-  },
-  {
-    id: "23khoroo",
-    value: "23-р хороо",
-  },
-  {
-    id: "24khoroo",
-    value: "24-р хороо",
-  },
-  {
-    id: "25khoroo",
-    value: "25-р хороо",
-  },
-  {
-    id: "26khoroo",
-    value: "26-р хороо",
-  },
-  {
-    id: "27khoroo",
-    value: "27-р хороо",
-  },
-  {
-    id: "28khoroo",
-    value: "28-р хороо",
-  },
-  {
-    id: "29khoroo",
-    value: "29-р хороо",
-  },
-  {
-    id: "30khoroo",
-    value: "30-р хороо",
-  },
-];
-
-export class GoogleMapsOptions {
-  static libraries = ["places"] as Libraries;
-}
-
-export const proSwiperBreakpoints: {
-  [width: number]: SwiperOptions;
-  [ratio: string]: SwiperOptions;
-} = {
-  // sm
-  1: {
-    slidesPerView: 1,
-    grid: {
-      rows: 2,
-      fill: "row",
-    },
-  },
-
-  1280: {
-    slidesPerView: 2,
-    grid: {
-      rows: 2,
-      fill: "row",
-    },
-  },
-};
-
-export const swiperBreakpoints: {
-  [width: number]: SwiperOptions;
-  [ratio: string]: SwiperOptions;
-} = {
-  // sm
-  1: {
-    slidesPerView: 1,
-    grid: {
-      rows: 2,
-      fill: "row",
-    },
-  },
-  640: {
-    slidesPerView: 2,
-    grid: {
-      rows: 2,
-      fill: "row",
-    },
-  },
-  // md
-  768: {
-    slidesPerView: 2,
-    grid: {
-      rows: 2,
-      fill: "row",
-    },
-  },
-  870: {
-    slidesPerView: 3,
-    grid: {
-      rows: 2,
-      fill: "row",
-    },
-  },
-  // lg
-  1024: {
-    slidesPerView: 3,
-    grid: {
-      rows: 2,
-      fill: "row",
-    },
-  },
-  // xl
-  1280: {
-    slidesPerView: 4,
-    grid: {
-      rows: 2,
-      fill: "row",
-    },
-  },
-  1600: {
-    slidesPerView: 5,
-    grid: {
-      rows: 2,
-      fill: "row",
-    },
-  },
-};

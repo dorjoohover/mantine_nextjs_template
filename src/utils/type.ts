@@ -1,80 +1,10 @@
-import { AdSellType, AdStatus, ItemTypes, ProfileEnumType, SocialsEnum } from "@/config/enum";
-import { AdModel } from "@/models/ad.model";
+import { ProfileEnumType } from "@/config/enum";
 import React, { ReactNode } from "react";
 
-export type FetchAdUnitType = {
-  ads: AdModel[];
-  limit: number;
-};
-
 export type AdCateIdType = {
-  id: string, 
-  cateId: string
-}
-
-export type AdFilterType = {
   id: string;
-
-  value?: string;
-
-  min?: number;
-
-  max?: number;
-  parent?: string
+  cateId: string;
 };
-
-export type FetchAdType = {
-  defaultAds: FetchAdUnitType;
-  specialAds: FetchAdUnitType;
-};
-export type FeedbackType = {
-  title: string;
-  message: string;
-};
-
-export type LoadingButtonType = {
-  text: string;
-  onClick?: () => {};
-  blue?: boolean;
-  isLoading: boolean;
-};
-export type ProductInfoValueType = {
-  href: boolean;
-  value: string;
-  id: string;
-  cateId: number | string;
-};
-export type SocialType = { name: SocialsEnum; url: string };
-
-// zasna
-export type CreateAdType = {
-  categoryId?: number;
-  categoryName?: string;
-  subCategoryId: string;
-  category_ID?: string;
-  sellType?: AdSellType;
-  adType?: string;
-  file?: File
-  fileUrl?: string
-};
-
-export type EstimateItemType = {
-  name: string;
-  id: string;
-  value: string;
-  type?: ItemTypes;
-}
-export type EstimateType = 
-  {
-    fileUrl?: string
-    file?: File;
-    items: EstimateItemType[];
-    subCategory: string;
-    category: string;
-    sellType: AdSellType;
-    status: AdStatus;
-  }
-
 export type GeneralDataType = {
   price: number;
   area: number;
@@ -86,8 +16,8 @@ export type GeneralDataType = {
   phone: number;
 };
 export type GoogleMapsType = {
-  lat: number, 
-  lng: number
+  lat: number;
+  lng: number;
 };
 
 export type CacheVarType = {
@@ -120,14 +50,14 @@ export type StepTypes = {
   imgSelected?: boolean;
   images?: string[];
   phone?: number;
-  files?: File[]
+  files?: File[];
 };
 export type ItemType = {
   data?: string;
-  className?: string
+  className?: string;
   onClick?: () => void;
   id?: string;
-  children?: ReactNode
+  children?: ReactNode;
   isSelected?: boolean;
 };
 

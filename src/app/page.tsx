@@ -1,4 +1,4 @@
-import { Box, Button, Input, Select, Text } from "@mantine/core";
+import { Box, Input, Select } from "@mantine/core";
 
 export default function Home() {
   return (

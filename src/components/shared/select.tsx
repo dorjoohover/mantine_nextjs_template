@@ -29,9 +29,10 @@ export const RangeInput = ({
           value={minValue == null ? "" : minValue}
           className={`rounded-[8px] ${minFocused ? "!bg-mixedBlue20" : ""}`}
           onChange={(e) => {
-            e == minValue || e == null
-              ? minChange(null)
-              : minChange(parseFloat(`${e}`));
+            console.log(e);
+            // e == minValue || e == null
+            //   ? minChange(null)
+            //   : minChange(parseFloat(`${e}`));
           }}
           ref={minRef}
           rightSection={
@@ -85,9 +86,10 @@ export const RangeInput = ({
           }
           placeholder="Дээд"
           onChange={(e) => {
-            e == minValue || e == null
-              ? maxChange(null)
-              : maxChange(parseFloat(`${e}`));
+            console.log(e);
+            // e == minValue || e == null
+            //   ? maxChange(null)
+            //   : maxChange(parseFloat(`${e}`));
           }}
         />
       </Flex>

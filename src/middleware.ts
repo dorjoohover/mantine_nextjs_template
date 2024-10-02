@@ -1,7 +1,6 @@
 import { cookies } from "next/headers";
 import type { NextRequest } from "next/server";
 import { UserType } from "./config/enum";
-import { getUser } from "./app/(api)/user.api";
 
 export function middleware(request: NextRequest) {
   const current = cookies().get("current");
@@ -32,12 +31,13 @@ export function middleware(request: NextRequest) {
       const red =
         request.nextUrl.pathname == "/admin" ||
         request.nextUrl.pathname.toLowerCase().startsWith("/admin/request");
-      if (red && !url.toLocaleLowerCase().startsWith('/admin/request/'))
+      if (red && !url.toLocaleLowerCase().startsWith("/admin/request/"))
         return Response.redirect(
           new URL("/admin/request/realState", request.url)
         );
-      const users = url.toLocaleLowerCase() == '/admin/users'
-      if(users) return Response.redirect(new URL('/admin/users/default', request.url))
+      const users = url.toLocaleLowerCase() == "/admin/users";
+      if (users)
+        return Response.redirect(new URL("/admin/users/default", request.url));
     }
   }
 }

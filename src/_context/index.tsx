@@ -1,32 +1,18 @@
 "use client";
-import { AdCateIdType, FetchAdType } from "@/utils/type";
-import { GoogleMapsOptions } from "@/utils/values";
+import { AdCateIdType } from "@/utils/type";
 import { ReactNode, createContext, useState, useContext } from "react";
+interface AppContextType {
+  compare: AdCateIdType[];
+  setCompare: React.Dispatch<React.SetStateAction<AdCateIdType[]>>;
+}
 
-const AppContext = createContext<any>(undefined);
+const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export function AppWrapper({ children }: { children: ReactNode }) {
-  let [ads, setAds] = useState<FetchAdType>({
-    defaultAds: {
-      ads: [],
-      limit: 0,
-    },
-    specialAds: {
-      ads: [],
-      limit: 0,
-    },
-  });
-  let [compare, setCompare] = useState<AdCateIdType[]>([]);
+  const [compare, setCompare] = useState<AdCateIdType[]>([]); // Managing state
 
   return (
-    <AppContext.Provider
-      value={{
-        ads,
-        setAds,
-        compare,
-        setCompare,
-      }}
-    >
+    <AppContext.Provider value={{ compare, setCompare }}>
       {children}
     </AppContext.Provider>
   );

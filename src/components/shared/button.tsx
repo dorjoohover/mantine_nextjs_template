@@ -32,9 +32,16 @@ export const MultipleSelect = ({
             py={36}
             bg={"white"}
           >
+            {data.map((d) => {
+              return <p key={d.id}>{d.value}</p>;
+            })}
             {Array.from({ length: 30 }, (_, i) => i + 1).map((d) => {
               return (
                 <Button
+                  key={d}
+                  onClick={() => {
+                    onChange(`${d}`);
+                  }}
                   unstyled
                   radius={20}
                   c={"smokyBlue"}

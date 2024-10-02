@@ -1,4 +1,4 @@
-import useWindowSize from "./useDimensions";
+import { useViewportSize } from "@mantine/hooks";
 
 export const SIZE_XS = "xs";
 export const SIZE_SM = "sm";
@@ -29,7 +29,7 @@ export const resolveBreakpoint = (width: number) => {
 };
 
 const useBreakpoints = () => {
-  const { width } = useWindowSize();
+  const { width } = useViewportSize();
 
   return resolveBreakpoint(width ?? 1801);
 };

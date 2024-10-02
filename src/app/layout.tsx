@@ -1,29 +1,20 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "@/styles/globals.scss";
 import "@mantine/core/styles.css";
-import { cookies, headers } from "next/headers";
+import { cookies } from "next/headers";
 import { fonts } from "@/_fonts/rubik";
 import { logoMiniWhite } from "@/utils/assets";
 import Head from "next/head";
-import { Loader, MantineProvider, MantineThemeProvider } from "@mantine/core";
+import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import NextAuthProvider from "@/_context/auth";
 import { Notifications } from "@mantine/notifications";
 import { AppWrapper } from "@/_context";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense } from "react";
 import { theme } from "@/theme/theme";
 import "@mantine/core/styles/global.css";
 import { AdminNavbar, Navbar } from "@/components/navbar/navbar";
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import Loading from "./loading";
+
 export const metadata: Metadata = {
   title: {
     absolute: "",
@@ -39,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const cookieStore = cookies();
-  const userRole = cookieStore.get('user-role')?.value;
+  const userRole = cookieStore.get("user-role")?.value;
   return (
     <html lang="en" className={fonts.rubik.variable}>
       {/* <html lang="en"> */}
@@ -50,19 +41,24 @@ export default function RootLayout({
           type="image/png"
           sizes="32x32"
         />
-        {/* <ColorSchemeScript />{" "} */}
+        <ColorSchemeScript />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
         />
       </Head>
       <body>
-        <MantineProvider theme={theme}>
+        <MantineProvider
+          theme={theme}
+          defaultColorScheme="light"
+          withGlobalClasses
+          withStaticClasses
+        >
           <NextAuthProvider>
             <Notifications />
             <AppWrapper>
-              <Suspense fallback={<Loader />}>
-                {userRole == 'admin' ? <AdminNavbar /> : <Navbar />}
+              <Suspense fallback={<Loading />}>
+                {userRole == "admin" ? <AdminNavbar /> : <Navbar />}
                 {children}
 
                 {/* <ScrollTop /> */}

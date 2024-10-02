@@ -1,5 +1,5 @@
 "use client";
-import { getUser } from "@/app/(api)/user.api";
+import { getUser } from "@/(api)/user.api";
 import { UserModel } from "@/models/user.model";
 import { useEffect, useState } from "react";
 
