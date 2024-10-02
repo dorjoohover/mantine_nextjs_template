@@ -32,7 +32,11 @@ export default function RootLayout({
   const cookieStore = cookies();
   const userRole = cookieStore.get("user-role")?.value;
   return (
-    <html lang="en" className={fonts.rubik.variable}>
+    <html
+      lang="en"
+      className={fonts.rubik.variable}
+      data-mantine-color-scheme="light"
+    >
       {/* <html lang="en"> */}
       <Head>
         <link
@@ -41,7 +45,7 @@ export default function RootLayout({
           type="image/png"
           sizes="32x32"
         />
-        <ColorSchemeScript />
+        <ColorSchemeScript defaultColorScheme="light" />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
