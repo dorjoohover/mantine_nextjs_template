@@ -1,0 +1,16 @@
+@import "../vars/colors";
+.wrapper {
+  & .input {
+    border: 1px solid $stroke;
+    & .default {
+      background-color: white !important;
+    }
+    & .active {
+      background-color: $reportInputActive !important;
+    }
+  }
+
+  // &[data-variant="default"] {
+  //   --input-bg: $red;
+  // }
+}

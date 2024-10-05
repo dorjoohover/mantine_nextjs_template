@@ -23,4 +23,4 @@ export class Assets {
 export const imgLogo = `${assets}logo.png`;
 export const imgLogoWhite = `${assets}logo white.png`;
 export const districtIcon = `${icons}district.png`;
-export const compareArrowIcon = `${icons}compareArrow.png`;
+export const compareArrowIcon = `${icons}compareArrow.svg`;

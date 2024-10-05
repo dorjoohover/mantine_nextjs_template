@@ -6,9 +6,9 @@
 .nav__item {
   transition: 0.3s ease;
   &:hover {
-    color: $mainBlossom;
+    color: $main;
     .nav__icon {
-      color: $mainBlossom;
+      color: $main;
     }
   }
   height: 100%;
@@ -49,14 +49,14 @@
     transform: translateY(10px);
     left: 0;
     width: 0;
-    background-color: $mainBlossom;
+    background-color: $main;
     color: white;
     opacity: 0;
     transition: 0.2s ease;
     a {
       &:hover {
         background-color: white;
-        color: $mainBlossom;
+        color: $main;
       }
     }
   }
