@@ -1,6 +1,6 @@
 import { NumberInput, Select, TextInput } from "@mantine/core";
 import inputClasses from "../../styles/default/input.module.scss";
-import { Colors } from "@/utils/colors";
+import { Colors } from "@/base/constants";
 
 export const inputs = {
   Select: Select.extend({
@@ -15,7 +15,7 @@ export const inputs = {
   }),
 
   NumberInput: NumberInput.extend({
-    styles(theme, props, ctx) {
+    styles(theme, props) {
       return {
         input: {
           background:
@@ -47,7 +47,7 @@ export const inputs = {
   }),
   TextInput: TextInput.extend({
     classNames: inputClasses,
-    styles(theme, props, ctx) {
+    styles(theme, props) {
       return {
         input: {
           background:

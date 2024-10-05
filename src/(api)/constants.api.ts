@@ -1,6 +1,6 @@
 "use server";
 import { Api } from "@/config/enum";
-import { api } from "@/utils/values";
+import { api } from "@/utils/routes";
 import { cookies } from "next/headers";
 
 export async function getConstants(

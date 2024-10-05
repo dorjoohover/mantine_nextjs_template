@@ -1,5 +1,5 @@
-import { Colors } from "@/utils/colors";
-import { colorsTuple, virtualColor } from "@mantine/core";
+import { Colors } from "@/base/constants";
+import { colorsTuple } from "@mantine/core";
 
 export const colors = {
   main: colorsTuple(Colors.main),

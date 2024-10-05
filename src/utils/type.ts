@@ -87,13 +87,26 @@ export type TextType = {
   onChange?: (value: string) => void;
   value?: string;
 };
-// export type SelectType = {
+export type EstimateEnums = {
+  ESTIMATED: number;
+  FINISHED: number;
+  PENDING: number;
+  RETURNED: number;
+};
 
-//   data,
-//   Item = () => <></>,
-//   selected,
-//   title?: string;
-//   ph?: string;
-//   onChange?: (value: string) => {};
-//   value?: string;
-// };
+export type SellTypes = {
+  SELL: number;
+  RENT: number;
+  SELL_RENT: number;
+  SOLD: number;
+  RENTED: number;
+};
+
+export type SharingSellTypes = {
+  SOLD: number;
+  RENTED: number;
+};
+
+export type Dict = {
+  [key: number]: string;
+};

@@ -10,7 +10,7 @@ export const containers = {
       columnGap: 12,
       gap: 12,
     },
-    styles(theme, props, ctx) {
+    styles(theme, props) {
       if (props.variant == "rounded") {
         return {
           className: "rounded-full bg-main",
@@ -49,7 +49,7 @@ export const containers = {
       h: 25,
       bg: "main",
     },
-    styles(theme, props, ctx) {
+    styles(theme, props) {
       if (props.variant == "roundedIcon") {
         return {
           root: {

@@ -11,7 +11,6 @@ interface FormType {
 }
 
 export default function Home() {
-  const network = useNetwork();
   const form = useForm<FormType>({
     mode: "uncontrolled",
     initialValues: {

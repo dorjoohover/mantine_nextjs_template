@@ -1,5 +1,6 @@
 import { AdSellType } from "@/config/enum";
-import { gmailImageUrl, imageApi } from "./values";
+import { gmailImageUrl, imageApi } from "./routes";
+
 
 export default function mergeNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -19,7 +20,7 @@ export const profileImgUrl = (url?: string, assets?: string) => {
         "https://www.pikpng.com/pngl/m/80-805068_my-profile-icon-blank-profile-picture-circle-clipart.png";
 };
 
-export const formatText = (value: string) => {
+export const money = (value: string) => {
   return value
     .replaceAll(",", "")
     .toString()
@@ -67,6 +68,28 @@ export const getEstimateEnums = (est: string) => {
     default:
   }
 };
+
+export const globals:any = {
+  EstimateEnums :{
+    ESTIMATED: 10,
+    FINISHED: 20,
+    PENDING: 30,
+    RETURNED: 40,
+  },
+
+  SellTypes: {
+    SELL: 10,
+    RENT: 20,
+    SELL_RENT: 30,
+    SOLD: 40,
+    RENTED: 50,
+  },
+  
+  EstimateEnumsDict: {},
+}
+
+globals.EstimateEnumsDict[globals.EstimateEnums.estimated] = "Үнэлсэн"
+
 const isImage = (url: string) =>
   new Promise((resolve, reject) => {
     // check that is a valid url

@@ -1,9 +1,8 @@
 "use client";
-import { createTheme, virtualColor } from "@mantine/core";
+import { createTheme } from "@mantine/core";
 import { colors } from "./colors";
 import { components } from "./components";
-import { Colors } from "@/utils/colors";
-import { Sizes } from "@/utils/sizes";
+import { Sizes } from "@/base/constants";
 
 export const theme = createTheme({
   colors: colors,

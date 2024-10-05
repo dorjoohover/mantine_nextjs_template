@@ -1,8 +1,9 @@
 "use server";
+import { globals } from "@/base/globals";
+import { locale } from "@/base/vocabs/mn";
 import { PointTitle } from "@/config/enum";
 import { UserModel } from "@/models/user.model";
-import { ErrorMessages } from "@/utils/string";
-import { UserApi, api } from "@/utils/values";
+import { api, UserApi } from "@/utils/routes";
 import { cookies } from "next/headers";
 function clearCookie() {
   // const cookie = cookies();
@@ -41,7 +42,7 @@ export async function getUser(): Promise<UserModel | null> {
   } catch (error) {
     console.error(error);
     clearCookie();
-    throw new Error(ErrorMessages.occured);
+    throw new Error(locale.data.ERROR_MESSAGES.ERROR_OCCURED);
   }
 }
 
@@ -84,7 +85,7 @@ export const getFeedback = async () => {
     return res;
   } catch (error) {
     console.error(error);
-    throw new Error(ErrorMessages.occured);
+    throw new Error(locale.data.ERROR_MESSAGES.ERROR_OCCURED);
   }
 };
 
@@ -111,7 +112,7 @@ export const sendPointByUser = async (
     return res["message"] == "success" ? true : false;
   } catch (error) {
     console.error(error);
-    throw new Error(ErrorMessages.occured);
+    throw new Error(locale.data.ERROR_MESSAGES.ERROR_OCCURED);
   }
 };
 

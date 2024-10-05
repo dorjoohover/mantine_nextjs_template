@@ -1,4 +1,3 @@
-import { Select } from "@mantine/core";
 import { buttons } from "./button";
 import { text } from "./text";
 import { containers } from "./containers";
