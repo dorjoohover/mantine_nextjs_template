@@ -1,5 +1,5 @@
 "use server";
-import { AuthApi, api } from "@/utils/values";
+import { api, AuthApi } from "@/utils/routes";
 import { cookies } from "next/headers";
 
 export const loginUser = async (

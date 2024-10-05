@@ -69,26 +69,6 @@ export const getEstimateEnums = (est: string) => {
   }
 };
 
-export const globals:any = {
-  EstimateEnums :{
-    ESTIMATED: 10,
-    FINISHED: 20,
-    PENDING: 30,
-    RETURNED: 40,
-  },
-
-  SellTypes: {
-    SELL: 10,
-    RENT: 20,
-    SELL_RENT: 30,
-    SOLD: 40,
-    RENTED: 50,
-  },
-  
-  EstimateEnumsDict: {},
-}
-
-globals.EstimateEnumsDict[globals.EstimateEnums.estimated] = "Үнэлсэн"
 
 const isImage = (url: string) =>
   new Promise((resolve, reject) => {

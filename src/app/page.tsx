@@ -2,7 +2,6 @@
 import { RangeInput } from "@/components/shared/select";
 import { Box, Button, Input, NumberInput, Select } from "@mantine/core";
 import { useForm } from "@mantine/form";
-import { useNetwork } from "@mantine/hooks";
 import { useState } from "react";
 
 interface FormType {

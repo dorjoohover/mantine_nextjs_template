@@ -1,5 +1,4 @@
 "use server";
-import { globals } from "@/base/globals";
 import { locale } from "@/base/vocabs/mn";
 import { PointTitle } from "@/config/enum";
 import { UserModel } from "@/models/user.model";
